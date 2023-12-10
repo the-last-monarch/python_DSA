@@ -45,12 +45,20 @@
 # 5. Non Dominant Terms
     # #Big O(n^2 + n) This is actual represention of this method but we will write it as Big O(n^2)
     # #because "n^2" is more dominant than "n" so we can ignore "n" and it won't affect number of operations.
-def numbers(n):
-    for i in range(n):
-        for j in range(n):
-            print((i,j))
+    
+# # def numbers(n):
+# #     for i in range(n):
+# #         for j in range(n):
+# #             print((i,j))
             
-    for k in range(n):
-        print(k)
+# #     for k in range(n):
+# #         print(k)
 
-numbers(10)
+# #numbers(10)
+
+
+# 6. Big O - O(logN)
+
+# O(log N) is a common runtime complexity.
+# Examples include binary searches, finding the smallest or largest value in a binary search tree, and certain divide and conquer algorithms.
+# If an algorithm is dividing the elements being considered by 2 each iteration, then it likely has a runtime complexity of O(log N)
