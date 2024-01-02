@@ -62,3 +62,23 @@
 # O(log N) is a common runtime complexity.
 # Examples include binary searches, finding the smallest or largest value in a binary search tree, and certain divide and conquer algorithms.
 # If an algorithm is dividing the elements being considered by 2 each iteration, then it likely has a runtime complexity of O(log N)
+
+
+# Space compxlexity
+# def sum(n):
+#     if n <= 0:
+#         return 0
+#     return n + sum(n-1)
+
+# print(sum(3))
+
+def pair_sum_sequence(n):
+    total = 0
+    for i in range(n):
+        total = total + pair_sum(i, i+1)
+    return total
+
+def pair_sum(a, b):
+    return a + b
+
+pair_sum_sequence(4)
