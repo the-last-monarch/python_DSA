@@ -72,13 +72,33 @@
 
 # print(sum(3))
 
-def pair_sum_sequence(n):
-    total = 0
-    for i in range(n):
-        total = total + pair_sum(i, i+1)
-    return total
+# def pair_sum_sequence(n):
+#     total = 0
+#     for i in range(n):
+#         total = total + pair_sum(i, i+1)
+#     return total
 
-def pair_sum(a, b):
-    return a + b
+# def pair_sum(a, b):
+#     return a + b
 
-pair_sum_sequence(4)
+# pair_sum_sequence(4)
+
+
+# # Different Terms for Input - Add vs Multiply
+# # A) If your algorithm is in the form "do this, then when you are all done , do that" then you ADD the runtimes.
+                                # # ADD THE RUNTIMES :- O(A + B)
+                                
+def print_items(a, b):
+    for i in range (a):
+        print(i)
+        
+    for j in range (b):
+        print(j)
+
+# # B) If your algorithm is in the form "do this for each time you do that" then you MULTIPLY the runtimes.
+                                # # MULTIPLY THE RUNTIMES :- O(A*B)
+                                
+def print_items(a, b):
+    for i in range (a):
+        for j in range (b):
+            print(a, b)
