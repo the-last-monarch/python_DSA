@@ -49,12 +49,13 @@ import array
 
 
 # # Access array element
-my_array4 = array.array('i', [1,2,3,4,5,6])
+# my_array4 = array.array('i', [1,2,3,4,5,6])
 
-def accessArray(array, index):
-    if index >= len(array):
-        print("There is no element on this index. \nplease enter valid index!")
-    else:
-        print(array[index])
+# def accessArray(array, index):
+#     if index >= len(array): #------------------------------------> O(1)
+#         print("There is no element on this index. \nplease enter valid index!") # --------------> O(1)
+#     else:
+#         print(array[index]) # -------------------------O(1)
+# # Time complexity :- O(1)  Space complexity :- O(1)
+# accessArray(my_array4, 0)
 
-accessArray(my_array4, 0)
