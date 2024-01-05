@@ -85,20 +85,31 @@
 
 
 # # Different Terms for Input - Add vs Multiply
-# # A) If your algorithm is in the form "do this, then when you are all done , do that" then you ADD the runtimes.
+# # # A) If your algorithm is in the form "do this, then when you are all done , do that" then you ADD the runtimes.
                                 # # ADD THE RUNTIMES :- O(A + B)
                                 
-def print_items(a, b):
-    for i in range (a):
-        print(i)
+# def print_items(a, b):
+#     for i in range (a):
+#         print(i)
         
-    for j in range (b):
-        print(j)
+#     for j in range (b):
+#         print(j)
 
-# # B) If your algorithm is in the form "do this for each time you do that" then you MULTIPLY the runtimes.
-                                # # MULTIPLY THE RUNTIMES :- O(A*B)
+# # # B) If your algorithm is in the form "do this for each time you do that" then you MULTIPLY the runtimes.
+#                                 # # MULTIPLY THE RUNTIMES :- O(A*B)
                                 
-def print_items(a, b):
-    for i in range (a):
-        for j in range (b):
-            print(a, b)
+# def print_items(a, b):
+#     for i in range (a):
+#         for j in range (b):
+#             print(a, b)
+
+
+# # All Big O complixity in 1 Example
+# def findBiggestNumber(sampleArray):
+#     biggestNumber = sampleArray[0] # ----------------------------------------------- O(1)
+#     for index in range(1, len(sampleArray)): # ------------------------- O(n) }      O(n)
+#         if sampleArray[index] > biggestNumber: # ------------ O(1) }     O(1) }
+#             biggestNumber == sampleArray[index] # ----------- O(1) }      ↑
+#     print(biggestNumber) # --------------------------------------------------------- O(1)
+    
+    # O(1) + O(n) + O(1) = O(n) # # This happens because O(1) is non-dominant term
