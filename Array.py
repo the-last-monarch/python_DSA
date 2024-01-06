@@ -90,3 +90,31 @@ import array
 # # Space Complexity = O(1)
 
 
+######### Time and Space complexity in Array
+# # Creating an empty array
+# # Time Complexity = O(1)
+# # Space Complexity = O(1)
+
+# # Creating an Array with element
+# # Time Complexity = O(n)
+# # Space Complexity = O(n)
+
+# # Inserting a value in Array
+# # Time Complexity = O(n)
+# # Space Complexity = O(1)
+
+# # Traversing a given Array
+# # Time Complexity = O(n)
+# # Space Complexity = O(1)
+
+# # Accessing a given cell
+# # Time Complexity = O(1)
+# # Space Complexity = O(1)
+
+# # Serching a given value
+# # Time Complexity = O(n)
+# # Space Complexity = O(1)
+
+# # Deleting a given value
+# # Time Complexity = O(n)
+# # Space Complexity = O(1)
