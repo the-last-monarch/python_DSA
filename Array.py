@@ -19,10 +19,10 @@
 import array
 # import numpy as np
 
-# my_array = array.array('i') # ---------------------> O(1)
-# print(my_array)
-# my_array1 = array.array('i', [1,2,3,4]) # -------------------O(n)
-# print(my_array1)
+# arr = array.array('i') # ---------------------> O(1)
+# print(arr)
+# arr1 = array.array('i', [1,2,3,4]) # -------------------O(n)
+# print(arr1)
  
 # np_array = np.array([], dtype = int) # -----------------------O(1)
 # print(np_array)
@@ -32,24 +32,24 @@ import array
 
 # # Inserting to an Array
 
-# my_array2 = array.array('i', [1,2,3,4])
-# print(my_array2)
-# my_array2.insert(0, 5) # -----------------> Max. Space complexity = O(n) and Time complexity = O(1)
-# print(my_array2)
+# arr2 = array.array('i', [1,2,3,4])
+# print(arr2)
+# arr2.insert(0, 5) # -----------------> Max. Space complexity = O(n) and Time complexity = O(1)
+# print(arr2)
 
 
 # # Traversal Array
 
-# my_array3 = array.array('i', [1,2,3,4,5])
+# arr3 = array.array('i', [1,2,3,4,5])
 # def traversalArray(array):
 #     for i in array: # ------------> Time complexity = O(n)
 #         print(i)    # ------------> Time complexity = O(1)   
 # # So, Time complexity will be O(n) and Space Complexity will be O(1) because we don't need extra space in memory
-# traversalArray(my_array3)
+# traversalArray(arr3)
 
 
 # # Access array element
-# my_array4 = array.array('i', [1,2,3,4,5,6])
+# arr4 = array.array('i', [1,2,3,4,5,6])
 
 # def accessArray(array, index):
 #     if index >= len(array): #------------------------------------> O(1)
@@ -57,19 +57,36 @@ import array
 #     else:
 #         print(array[index]) # -------------------------O(1)
 # # Time complexity :- O(1)  Space complexity :- O(1)
-# accessArray(my_array4, 0)
+# accessArray(arr4, 0)
 
 
 # # Searching for an element in array
 
-# my_array5 = array.array('i', [1,2,3,4,5])
+# arr5 = array.array('i', [1,2,3,4,5])
 
-# def linear_search(array, target):
+# def linear_search(arr, target):
 #     for i in range(len(array)):  # Time complexity --------------- O(n)
 #         if array[i] == target:   # Time complexity --------------- O(1)
 #             return i   # Time complexity --------------- O(1)
 #     return -1
-# print(linear_search(my_array5, 5))
+# print(linear_search(arr5, 5))
 
-# # # Time complexity = O(n)
-# # # Space complexity = 0(1)
+# # Time complexity = O(n)
+# # Space complexity = 0(1)
+
+
+# # Deleting an element in array
+# # When we delete any element from array it don't just disapper but the next element to it will take it place so there is no empty space will be left.
+
+# arr6 = array.array('i', [1,2,3,4,5,6])
+
+# arr6.remove(3)
+# print(arr6)
+
+# # if we remove element from the end of array 
+# # Time complexity = O(1)
+# # if we remove element from any point from the array
+# # Time Complexity = O(n)
+# # Space Complexity = O(1)
+
+
