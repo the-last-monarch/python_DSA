@@ -59,3 +59,17 @@ import array
 # # Time complexity :- O(1)  Space complexity :- O(1)
 # accessArray(my_array4, 0)
 
+
+# # Searching for an element in array
+
+# my_array5 = array.array('i', [1,2,3,4,5])
+
+# def linear_search(array, target):
+#     for i in range(len(array)):  # Time complexity --------------- O(n)
+#         if array[i] == target:   # Time complexity --------------- O(1)
+#             return i   # Time complexity --------------- O(1)
+#     return -1
+# print(linear_search(my_array5, 5))
+
+# # # Time complexity = O(n)
+# # # Space complexity = 0(1)
