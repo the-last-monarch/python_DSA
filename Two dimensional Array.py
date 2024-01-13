@@ -50,3 +50,12 @@ print(twoDArray)
 # # Time Complixity → in line 42 its O(mn) because for every row it should check every column also 
 #                     # in line 43 its O(n)
 # # Space Complixity → O(1)
+
+
+# # Deletion Two Dimensional Array
+# newTDArray = np.delete(twoDArray, 3, axis=1)
+# print(newTDArray)
+
+# # Time Complixity → O(mn)
+# # Space Complixity → O(mn)
+
