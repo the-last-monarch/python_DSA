@@ -59,3 +59,12 @@ print(twoDArray)
 # # Time Complixity → O(mn)
 # # Space Complixity → O(mn)
 
+
+# # Time and Space Complixity in 2D Array
+# # Creating an empty Array ----→ Time complixity: O(1)        Space complixity: O(1)
+# # Creating an Array with elements ----→ Time complixity: O(mn)        Space complixity: O(mn)
+# # Inserting a row/column in an Array ----→ Time complixity: O(mn)        Space complixity: O(mn)
+# # Traversing a given Array ----→ Time complixity: O(mn)        Space complixity: O(1)
+# # Accessing a give cell ----→ Time complixity: O(1)        Space complixity: O(1)
+# # Searching a given value ----→ Time complixity: O(mn)        Space complixity: O(1)
+# # Deleting a column/row ----→ Time complixity: O(mn)        Space complixity: O(mn)
