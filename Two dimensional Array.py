@@ -69,3 +69,14 @@ print(twoDArray)
 # # Searching a given value ----→ Time complixity: O(mn)        Space complixity: O(1)
 # # Deleting a column/row ----→ Time complixity: O(mn)        Space complixity: O(mn)
 
+
+
+# # When to use and avoid Array
+
+# # When to use Array:
+# # 1. To store multiple variables of same data type.
+# # 2. When we need to Random Access to given array because it will take O(1) Time Complixity.
+
+# # When to avoid an Array:
+# # 1. Storing same data type (in some coding languages it is an issue).
+# # 2. Reserve specific memory in storage((RAM)).
