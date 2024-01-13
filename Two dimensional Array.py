@@ -1,12 +1,12 @@
 ###### TWO DIMENSIONAL ARRAY #######
 import numpy as np
-twoDarray = np.array([[11,23,21,8], [23, 19, 5, 9], [25, 31, 1, 17], [15, 0, 4, 41]])
-print(twoDarray)
+twoDArray = np.array([[11,23,21,8], [23, 19, 5, 9], [25, 31, 1, 17], [15, 0, 4, 41]])
+print(twoDArray)
 
-# # twoDarray1 = np.insert(twoDarray, 1, [[1,2,3,4]], axis=0)
+# # twoDarray1 = np.insert(twoDArray, 1, [[1,2,3,4]], axis=0)
 # # print(twoDarray1)
 
-# twoDarray1 = np.append(twoDarray, [[1,2,3,4]], axis=0)
+# twoDarray1 = np.append(twoDArray, [[1,2,3,4]], axis=0)
 # print(twoDarray1)
 
 
@@ -18,9 +18,20 @@ print(twoDarray)
 #     else:
 #         print(array[rowIndex][colIndex])
 
-# accessElements(twoDarray, 2, 3)
+# accessElements(twoDArray, 2, 3)
 
 # # Time complexity = O(1)
 # # Space complexity = O(1)
 
 
+# # Traversing Two Dimensional array
+# def traverseTDArray(array):
+#     for i in range (len(array)):
+#         for j in range (len(array[0])):
+#             print(array[i][j])
+
+# traverseTDArray(twoDArray)
+# # Time Complixity → in line 29 its O(mn) because for every row it should check every column also 
+#                     # in line 30 its O(n)
+#                     # final  Time Complixity will be O(n∧2)
+# # Space Complixity → O(1)
