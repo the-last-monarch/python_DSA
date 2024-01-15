@@ -81,3 +81,31 @@
 #     return -1
 
 # print(linerSearch(my_list, target))
+
+
+# # List Operations/Functions
+# a = [1,2,3]
+# b = [4,5,6]
+# c = a + b   # Here, '+' is an operator
+# print(c)
+
+# d = [0]
+# d = d * 4
+# print(d)
+
+# e = [1,2,3,4,5,6,7]
+# print(len(e))
+# print(max(e))
+# print(min(e))
+# print(sum(e))
+# # Avergae
+# print(sum(e)/len(e))
+
+# mylist = list()
+# while True:
+#     inp = input("Enter the numbers you want average:")
+#     if inp == 'done': break
+#     value = float(inp)
+#     mylist.append(value)
+# average = sum(mylist)/len(mylist)
+# print("Avergae:",average)
