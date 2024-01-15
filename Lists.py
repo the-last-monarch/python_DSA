@@ -32,8 +32,9 @@
 
 
 # # Update/ Insert in a List
-myList = [1,2,3,4,5,6]
-print(myList)
+
+# myList = [1,2,3,4,5,6]
+# print(myList)
 
 # myList[2] = 22
 # myList[3] = 33
@@ -45,4 +46,19 @@ print(myList)
 # print(myList)
 # newList = [100, 99, 98, 97]
 # myList.extend(newList) --------------------------→ Time Complixity = O(n) Space Complixity = O(n)
+# print(myList)
+
+
+# # Slicing/Deleting a List
+
+# myList = ['a', 'b', 'c', 'd', 'e', 'f']
+# print(myList[0:2])
+# myList[0:2] = ['x', 'y']
+# print(myList[:])
+
+# print(myList.pop(2)) --------------------------→ Time Complixity = O(1)/O(n) Space Complixity = O(1)
+# print(myList)
+# del myList[2:4] --------------------------→ Time Complixity = O(n) Space Complixity = O(1)
+# print(myList)
+# myList.remove('f') --------------------------→ Time Complixity = O(n) Space Complixity = O(1)
 # print(myList)
