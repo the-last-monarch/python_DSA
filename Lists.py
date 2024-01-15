@@ -29,3 +29,20 @@
 # emptyList = []
 # for i in emptyList:
 #     print("This will never print. Because list is empty.")
+
+
+# # Update/ Insert in a List
+myList = [1,2,3,4,5,6]
+print(myList)
+
+# myList[2] = 22
+# myList[3] = 33
+# print(myList)
+
+# myList.insert(0,11) --------------------------→ Time Complixity = O(n) Space Complixity = O(1)
+# print(myList)
+# myList.append(10) ----------------------------→ Time Complixity = O(1) Space Complixity = O(1)
+# print(myList)
+# newList = [100, 99, 98, 97]
+# myList.extend(newList) --------------------------→ Time Complixity = O(n) Space Complixity = O(n)
+# print(myList)
