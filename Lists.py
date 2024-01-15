@@ -62,3 +62,22 @@
 # print(myList)
 # myList.remove('f') --------------------------→ Time Complixity = O(n) Space Complixity = O(1)
 # print(myList)
+
+
+# # Serching for an element in the List
+# my_list = [10,20,30,40,50,60,70,80,90]
+# in operator
+# target = 60
+# if target in my_list:
+#     print(f"{target} is present in the my_list")
+# else:
+#     print(f"{target} is not present in the my_list")
+
+# Liner Search
+# def linerSearch(list, target):
+#     for i,value in enumerate(list): # --------------------------→ Time Complixity = O(n) Space Complixity = O(1)
+#         if value == target:
+#             return i
+#     return -1
+
+# print(linerSearch(my_list, target))
