@@ -124,8 +124,8 @@
 
 
 # # Pitfalls and avoid of list
-myList = [4,3,6,1,9,0]
-orig = myList[:]
+# myList = [4,3,6,1,9,0]
+# orig = myList[:]
 # myList = myList.sort()
 # print(myList)
 
@@ -135,5 +135,16 @@ orig = myList[:]
 # myList.sort()
 # print(myList)
 
-print(sorted(myList))
-print(orig)
+# print(sorted(myList))
+# print(orig)
+
+
+# # Array vs Lists
+import numpy as np
+myArray = np.array([1,2,3,4,5,6, 'a']) # Here int also convert in str
+myList = [1,2,3,4,5,6] # Here int stay int and str stay as str
+
+# print(myArray/2)
+print(myArray)
+# print(myList/2)
+print(myList)
