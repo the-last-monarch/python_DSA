@@ -112,12 +112,28 @@
 
 
 # # String to a List
-a = 'spam'
-b = list(a)
-print(b)
+# a = 'spam'
+# b = list(a)
+# print(b)
 
-c = 'spam-spam1-spam2'
-x = '-'
-d = c.split(x)
-print(d)
-print(x.join(d))
+# c = 'spam-spam1-spam2'
+# x = '-'
+# d = c.split(x)
+# print(d)
+# print(x.join(d))
+
+
+# # Pitfalls and avoid of list
+myList = [4,3,6,1,9,0]
+orig = myList[:]
+# myList = myList.sort()
+# print(myList)
+
+# myList.append([10])
+# print(myList)
+
+# myList.sort()
+# print(myList)
+
+print(sorted(myList))
+print(orig)
