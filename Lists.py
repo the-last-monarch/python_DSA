@@ -109,3 +109,15 @@
 #     mylist.append(value)
 # average = sum(mylist)/len(mylist)
 # print("Avergae:",average)
+
+
+# # String to a List
+a = 'spam'
+b = list(a)
+print(b)
+
+c = 'spam-spam1-spam2'
+x = '-'
+d = c.split(x)
+print(d)
+print(x.join(d))
