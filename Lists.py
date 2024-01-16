@@ -140,11 +140,21 @@
 
 
 # # Array vs Lists
-import numpy as np
-myArray = np.array([1,2,3,4,5,6, 'a']) # Here int also convert in str
-myList = [1,2,3,4,5,6] # Here int stay int and str stay as str
+# import numpy as np
+# myArray = np.array([1,2,3,4,5,6, 'a']) # Here int also convert in str
+# myList = [1,2,3,4,5,6] # Here int stay int and str stay as str
 
 # print(myArray/2)
-print(myArray)
+# print(myArray)
 # print(myList/2)
-print(myList)
+# print(myList)
+
+
+# # Time and Space complixity of List
+# # Creating an empty list ---------------→ Time Complixity = O(1)        Space Complixity = O(1)
+# # Creating a List with element ---------------→ Time Complixity = O(n)        Space Complixity = O(n)
+# # Inserting a value in List ---------------→ Time Complixity = O(n)        Space Complixity = O(1)
+# # Traversing a List ---------------→ Time Complixity = O(n)        Space Complixity = O(1)
+# # Accessing a given List ---------------→ Time Complixity = O(1)        Space Complixity = O(1)
+# # Searching a given value in List ---------------→ Time Complixity = O(1)        Space Complixity = O(1)
+# # Deleting a value from List ---------------→ Time Complixity = O(n)        Space Complixity = O(1)
