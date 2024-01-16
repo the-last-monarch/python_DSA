@@ -161,7 +161,7 @@
 
 
 # # List Comprehension
-prev_list = [1,2,3,4]
+# prev_list = [1,2,3,4]
 # new_list = []
 # for i in prev_list:
 #     multiply_2 = i * 2
@@ -169,10 +169,43 @@ prev_list = [1,2,3,4]
 
 # # new_list = [new_list for item in list]
 
-new_list = [i * 2 for i in prev_list]
-print(prev_list)
-print(new_list)
+# new_list = [i * 2 for i in prev_list]
+# print(prev_list)
+# print(new_list)
 
-language = "python"
-new_list2 = [letter for letter in language]
-print(new_list2)
+# language = "python"
+# new_list2 = [letter for letter in language]
+# print(new_list2)
+
+
+# # Conditional List Comprehension
+# # new_list = [new_item for item in list if condition]
+
+# oldList = [12,-9,34,6,-1,5,-90]
+# newList = [number for number in oldList if number > 0]
+# print(newList)
+
+# newList = [number * number for number in oldList if number < 0]
+# print(newList)
+
+# sentence = "I am Laptop"
+
+# def is_constant(letter):
+#     vowels = "aeiou"
+#     return letter.isalpha() and letter.lower() not in vowels
+# print(is_constant("z"))
+# constants = [i for i in sentence if is_constant(i)]
+# print(constants)
+
+# def get_number(number):
+#     if number > 0:
+#         return number
+#     else:
+#         return "negative number"
+    # return number if number > 0 else "negative number"
+    
+# new_List = [number if number > 0 else 0 for number in oldList]
+# print(new_List)
+
+# new_List = [get_number(number) for number in oldList]
+# print(new_List)
