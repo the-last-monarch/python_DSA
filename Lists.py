@@ -158,3 +158,21 @@
 # # Accessing a given List ---------------→ Time Complixity = O(1)        Space Complixity = O(1)
 # # Searching a given value in List ---------------→ Time Complixity = O(1)        Space Complixity = O(1)
 # # Deleting a value from List ---------------→ Time Complixity = O(n)        Space Complixity = O(1)
+
+
+# # List Comprehension
+prev_list = [1,2,3,4]
+# new_list = []
+# for i in prev_list:
+#     multiply_2 = i * 2
+#     new_list.append(multiply_2)
+
+# # new_list = [new_list for item in list]
+
+new_list = [i * 2 for i in prev_list]
+print(prev_list)
+print(new_list)
+
+language = "python"
+new_list2 = [letter for letter in language]
+print(new_list2)
