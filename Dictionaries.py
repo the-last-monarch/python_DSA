@@ -21,3 +21,13 @@
 
 # # A 'hash table' is a way of doing key-value lookups. You store the values in array, and then use a hash function to find the index of array cell
 # # that corresponds to your key-value pairs.
+
+
+# # Add / Update element in dictionary
+
+myDict = {'name': 'Shadow', 'age': 30}
+print(myDict)
+myDict['age'] = 19    # Time Complixity = O(1)  Space Complixity = O(n)
+print(myDict)
+myDict['address'] = 'Bharat'
+print(myDict)
