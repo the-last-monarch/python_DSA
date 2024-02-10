@@ -43,3 +43,17 @@
 # traverseDict(myDict)
 # # Time Complixity = O(n)  Space Complixity = O(1)
 
+
+# Searching element in Dictionary
+
+myDict = {'name': 'Shadow', 'age': 30, 'address': 'Bharat'}
+
+def searchDict(dict, value):
+    for key in dict:
+        if dict[key] == value:
+            return key, value
+    return 'The entered value does not exist'    
+print(searchDict(myDict, 30))
+# Time Complixity = O(n)  Space Complixity = O(1)
+
+
