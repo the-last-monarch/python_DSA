@@ -25,9 +25,21 @@
 
 # # Add / Update element in dictionary
 
-myDict = {'name': 'Shadow', 'age': 30}
-print(myDict)
-myDict['age'] = 19    # Time Complixity = O(1)  Space Complixity = O(n)
-print(myDict)
-myDict['address'] = 'Bharat'
-print(myDict)
+# myDict = {'name': 'Shadow', 'age': 30}
+# print(myDict)
+# myDict['age'] = 19    # Time Complixity = O(1)  Space Complixity = O(n)
+# print(myDict)
+# myDict['address'] = 'Bharat'    # Time Complixity = O(1)  Space Complixity = amortized O(1)
+# print(myDict)
+
+
+# # Traversing through a Dictionary
+
+# myDict = {'name': 'Shadow', 'age': 30}
+
+# def traverseDict(dict):
+#     for key in dict:
+#         print(key,':-', dict[key])
+# traverseDict(myDict)
+# # Time Complixity = O(n)  Space Complixity = O(1)
+
