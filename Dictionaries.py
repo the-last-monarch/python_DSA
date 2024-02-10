@@ -44,16 +44,34 @@
 # # Time Complixity = O(n)  Space Complixity = O(1)
 
 
-# Searching element in Dictionary
+# # Searching element in Dictionary
 
-myDict = {'name': 'Shadow', 'age': 30, 'address': 'Bharat'}
+# myDict = {'name': 'Shadow', 'age': 30, 'address': 'Bharat'}
 
-def searchDict(dict, value):
-    for key in dict:
-        if dict[key] == value:
-            return key, value
-    return 'The entered value does not exist'    
-print(searchDict(myDict, 30))
-# Time Complixity = O(n)  Space Complixity = O(1)
+# def searchDict(dict, value):
+#     for key in dict:
+#         if dict[key] == value:
+#             return key, value
+#     return 'The entered value does not exist'    
+# print(searchDict(myDict, 30))
+# # Time Complixity = O(n)  Space Complixity = O(1)
+
+
+# # Deleting an element in Dictionary
+
+myDict = {'name': 'Shadow', 'age': 19, 'address': 'Bharat', 'study': 'unpad'}
+del myDict['study']   # Time Complixity = O(1)  Space Complixity = O(1)
+print(myDict)
+
+remove_element = myDict.pop('study', None)    # Now this will not return any error even if the value is not in the Dictionary and even return value of removed/deleted key.
+print(remove_element)   # Time Complixity = O(1)  Space Complixity = O(1)
+print(myDict)
+
+remove_element_again = myDict.popitem()     # This will remove the last element from the Dictionary
+print(remove_element_again)   # Time Complixity = O(1)  Space Complixity = O(1)
+print(myDict)
+
+myDict.clear()
+print(myDict)
 
 
