@@ -115,3 +115,33 @@
 
 # myDict.update(newDict)
 # print(myDict)
+
+
+# # Opertaion / Built-in methods
+
+# myDict = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five'}
+
+# print(1 in myDict)
+# print('one' in myDict.values())
+# print(6 not in myDict)
+# print('six' not in myDict)
+
+# print(len(myDict))
+
+# myDict2 = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 0: 'zero'}  # In dictionary '0' is False
+# myDict3 = {1: 'one', 'two': 2, True: "true"}  # Here its true because there is 'True' boolean in dictionary
+# myDict3_False = {1: 'one', 'two': 2, False: "false"}  # Here its false because there is 'False' boolean in dictionary 
+# print(all(myDict))
+# print(all(myDict2))
+# print(all(myDict3))
+# print(all(myDict3_False))
+
+# myDict2 = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 0: 'zero'} 
+# myDict3 = {1: 'one', 'two': 2, True: "true"}  
+# myDict3_True = {1: 'one', 'two': 2, False: "false"} 
+# print(any(myDict))
+# print(any(myDict2))
+# print(any(myDict2))
+# print(any(myDict3_True))
+
+# print(sorted(myDict))
