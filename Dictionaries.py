@@ -145,3 +145,13 @@
 # print(any(myDict3_True))
 
 # print(sorted(myDict))
+
+
+# # Dictionaries vs Lists
+
+# #               Dictionaries                |              list
+# #                Unordered                  |             Ordered
+# #              Access via keys              |        Access via index
+# #       Collection of key value pairs       |      Collection of elements
+# # preferred when you have unique key values | preferred when you have ordered data   
+# #           No duplicate members            |         Allow duplicate members
