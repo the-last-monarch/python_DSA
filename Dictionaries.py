@@ -155,3 +155,20 @@
 # #       Collection of key value pairs       |      Collection of elements
 # # preferred when you have unique key values | preferred when you have ordered data   
 # #           No duplicate members            |         Allow duplicate members
+
+
+# # Dictionary Comprehension
+# import random
+
+# # new_dict = {new_key: new_value for item in list}
+# cities = ['London', 'Brelin', 'Tokyo', 'New york', 'Moscow', 'Paris', 'Rome']
+# new_dict = {city: random.randint(20, 30) for city in cities}
+# print(new_dict)
+
+# # new_dict = {new_key: new_value for (key,value) in dict.items()}
+# new_dict2 = {city: temp for (city, temp) in new_dict.items()}
+# print(new_dict2)
+
+# # new_dict = {new_key: new_value for (key,value) in dict.values() if Condition}
+# new_dict3 = {city: temp for (city, temp) in new_dict.items() if temp > 25}
+# print(new_dict3)
