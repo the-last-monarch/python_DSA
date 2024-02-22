@@ -14,15 +14,29 @@
 # # # Time Complexity = O(1)
 # # # Space Complexity = O(n)
 
+
 # # How to access Tuples
+# newTuple = ('a', 'b', 'c', 'd', 'e')
 
-newTuple = ('a', 'b', 'c', 'd', 'e')
+# print(newTuple[1])
+# print(newTuple[-3])
 
-print(newTuple[1])
-print(newTuple[-3])
+# # Syntex = tuple[leftIndex:rightIndex] Right Index wouldn't include here
+# print(newTuple[1:3])
+# print(newTuple[:3])
+# print(newTuple[2:])
+# print(newTuple[:])
 
-# Syntex = tuple[leftIndex:rightIndex] Right Index wouldn't include here
-print(newTuple[1:3])
-print(newTuple[:3])
-print(newTuple[2:])
-print(newTuple[:])
+
+# # Traversing a Tuple
+
+# newTuple = ('a', 'b', 'c', 'd', 'e')
+
+# for i in newTuple:
+#     print(i)
+
+# for i in range(len(newTuple)):
+#     print(newTuple[i])
+
+# # Time Complexity :- O(n)
+# # Space Complexity :- O(1)
