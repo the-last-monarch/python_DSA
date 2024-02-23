@@ -43,18 +43,32 @@
 
 
 # # Searching for an element in Tuple
-
-newTuple = ('a', 'b', 'c', 'd', 'e')
+# newTuple = ('a', 'b', 'c', 'd', 'e')
 
 # print('a' in newTuple) # -------------> Time Complexity = O(n)
 
 # print(newTuple.index('f')) # -------------> Time Complexity = O(n)
 
-def searchTuple(p_tuple, element):
-    for i in range(0, len(p_tuple)): # -----------------------------> Time Complexity = O(n)
-        if p_tuple[i] == element: # --------------------------------> Time Complexity = O(1)
-            return f"The {element} in found on {i} index" # --------> Time Complexity = O(1)
-    return "The element is not present in tuple" # -----------------> Time Complexity = O(1)
+# def searchTuple(p_tuple, element):
+#     for i in range(0, len(p_tuple)): # -----------------------------> Time Complexity = O(n)
+#         if p_tuple[i] == element: # --------------------------------> Time Complexity = O(1)
+#             return f"The {element} in found on {i} index" # --------> Time Complexity = O(1)
+#     return "The element is not present in tuple" # -----------------> Time Complexity = O(1)
 # # Time complexity = O(n)
 # # Space complexity = O(1)
-print(searchTuple(newTuple, 'z'))
+# print(searchTuple(newTuple, 'z'))
+
+
+# # Tuple Function / Operations
+tuple1 = (1,2,3,4,5)
+tuple2 = (10,9,8,7,6)
+
+print(tuple1 + tuple2)
+print(tuple1 * 4)
+print(4 in tuple1)
+print(tuple1.count(2))
+print(tuple1.index(4))
+print(len(tuple2))
+print(max(tuple2))
+print(min(tuple1))
+print(tuple([1,2,3,4]))
