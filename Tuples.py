@@ -60,15 +60,42 @@
 
 
 # # Tuple Function / Operations
-tuple1 = (1,2,3,4,5)
-tuple2 = (10,9,8,7,6)
+# tuple1 = (1,2,3,4,5)
+# tuple2 = (10,9,8,7,6)
 
-print(tuple1 + tuple2)
-print(tuple1 * 4)
-print(4 in tuple1)
-print(tuple1.count(2))
-print(tuple1.index(4))
-print(len(tuple2))
-print(max(tuple2))
-print(min(tuple1))
-print(tuple([1,2,3,4]))
+# print(tuple1 + tuple2)
+# print(tuple1 * 4)
+# print(4 in tuple1)
+# print(tuple1.count(2))
+# print(tuple1.index(4))
+# print(len(tuple2))
+# print(max(tuple2))
+# print(min(tuple1))
+# print(tuple([1,2,3,4]))
+
+
+# # Tuple vs Lists
+
+# # List is mutable, whereas a Tuple is immutable.
+
+# list1 = [0,1,2,3,4,5,6]
+# tuple1 = (0,1,2,3,4,5,6)
+# list1[3] = 10
+# list1 = [6,5,4,3,2,1,0]
+# del list1[0]
+# print(list1)
+
+# tuple1[3] = 10
+# tuple1 = (6,5,4,3,2,1,0)
+# del tuple1[4]
+# print(tuple1)
+
+# # Functions that can be used for both List and Tuples. len(), max(), min(), sum(), any(), all() and sorted().
+# # Tuples can be stored in Lists. And Lists can be stored in Tuples.
+# list2 = [(1,2), (3,4), (5,6)]
+# tuple2 = ([1,2], [3,4], [5,6])
+# print(list2)
+# print(tuple2)
+init_tuple_a = 1, 2
+init_tuple_b = (3, 4)   
+[print(sum(x)) for x in [init_tuple_a + init_tuple_b]]
