@@ -30,7 +30,17 @@ class LinkedList:
         self.head = None
         self.tail = None
         self.length = 0
-
+        
+    def __str__(self):
+        temp_node = self.head
+        result = ''
+        while temp_node is not None:
+            result += str(temp_node.value)
+            if temp_node.next is not None:
+                result += "->"
+            temp_node = temp_node.next
+        return result
+    
     def append(self, value):
         new_node = Node(value)   # -------------------->  Time Complixity = O(1), Space Complixity = O(1)
         if self.head is None:   # --------------------->  Time Complixity = O(1), Space Complixity = O(1)
@@ -39,10 +49,10 @@ class LinkedList:
         else:
             self.tail.next = new_node   # ------------->  Time Complixity = O(1), Space Complixity = O(1)
             self.tail = new_node   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
-        self.length += 1
+        self.length += 1        
 
 new_linked_list = LinkedList()
 new_linked_list.append(10)
 new_linked_list.append(20)
-print(new_linked_list.head.value)
-print(new_linked_list.length)
+print(new_linked_list)
+# print(new_linked_list.length)
