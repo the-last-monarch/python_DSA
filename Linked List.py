@@ -60,8 +60,29 @@ class LinkedList:
             new_node.next = self.head   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
             self.head = new_node   # ----------------------->  Time Complixity = O(1), Space Complixity = O(1)
         self.length += 1
-        
+    
+    def insert(self, index, value):
+        new_node = Node(value)   # --------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        temp_node = self.head   # ---------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        if index < 0 or self.length > 0:   # ----------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            return False   # --------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        elif self.length == 0:   # --------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            self.head = new_node
+            self.tail = new_node
+        elif index == 0:   # --------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            new_node.next = self.head
+            self.head = new_node
+        else:       # ---------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            for _ in range(index-1):   # --------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+                temp_node = temp_node.next
+            new_node.next = temp_node.next
+            temp_node.next = new_node   # -------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        self.length += 1
+        return True
+# # Time Complixity in insert will be O(n), Space Complixity = O(1)
+   
 new_linked_list = LinkedList()
+new_linked_list.insert(1,50)
 new_linked_list.append(10)
 new_linked_list.append(20)
 new_linked_list.append(30)
