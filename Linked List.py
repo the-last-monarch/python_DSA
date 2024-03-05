@@ -49,10 +49,23 @@ class LinkedList:
         else:
             self.tail.next = new_node   # ------------->  Time Complixity = O(1), Space Complixity = O(1)
             self.tail = new_node   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
-        self.length += 1        
-
+        self.length += 1
+        
+    def prepend(self, value) :
+        new_node = Node(value)   # ------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        if self.head is None:   # -------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            self.head =  new_node   # ---------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            self.tail =  new_node   # ---------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        else:
+            new_node.next = self.head   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
+            self.head = new_node   # ----------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        self.length += 1
+        
 new_linked_list = LinkedList()
 new_linked_list.append(10)
 new_linked_list.append(20)
+new_linked_list.append(30)
 print(new_linked_list)
 # print(new_linked_list.length)
+new_linked_list.prepend(40)
+print(new_linked_list)
