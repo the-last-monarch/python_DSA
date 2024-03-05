@@ -19,16 +19,30 @@ class Node:   # Time Complixity = O(1), Space Complixity = O(1)
 
 # class LinkedList:
 #     def __init__(self, value):
-#         new_node = Node(10)
-#         self.head = new_node
-#         self.tail = new_node
-#         self.length = 1
+#         new_node = Node(10)   # ------------->  Time Complixity = O(1), Space Complixity = O(1)
+#         self.head = new_node  # ------------->  Time Complixity = O(1), Space Complixity = O(1)
+#         self.tail = new_node  # ------------->  Time Complixity = O(1), Space Complixity = O(1)
+#         self.length = 1   # ----------------->  Time Complixity = O(1), Space Complixity = O(1)
+
+# # Empty Linked List
 class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-        self.length = 1
+        self.length = 0
+
+    def append(self, value):
+        new_node = Node(value)   # -------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        if self.head is None:   # --------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            self.head = new_node   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
+            self.tail = new_node   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
+        else:
+            self.tail.next = new_node   # ------------->  Time Complixity = O(1), Space Complixity = O(1)
+            self.tail = new_node   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
+        self.length += 1
 
 new_linked_list = LinkedList()
-# print(new_linked_list.head.value)
+new_linked_list.append(10)
+new_linked_list.append(20)
+print(new_linked_list.head.value)
 print(new_linked_list.length)
