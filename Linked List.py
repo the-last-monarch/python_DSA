@@ -80,13 +80,40 @@ class LinkedList:
         self.length += 1
         return True
 # # Time Complixity in insert will be O(n), Space Complixity = O(1)
+
     def traverse(self):
         current = self.head
-        while current is not None:
+        while current is not None:   # --------------------------->  Time Complixity = O(n), Space Complixity = O(1)
             print(current.value)
             current = current.next
 # # Time Complixity in traverse will be O(n), Space Complixity = O(1)
-   
+
+    def search(self, target):
+        current = self.head   # --------------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+        index = 0
+        while current:   # -------------------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+            if current.value == target:   # --------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+                return index
+            current = current.next   # -------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+            index += 1
+        return -1
+# # Time Complixity in traverse will be O(n), Space Complixity = O(1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 new_linked_list = LinkedList()
 new_linked_list.insert(1,50)
 new_linked_list.append(10)
@@ -95,5 +122,6 @@ new_linked_list.append(30)
 # print(new_linked_list)
 # # print(new_linked_list.length)
 new_linked_list.prepend(40)
-# print(new_linked_list)
+print(new_linked_list)
 new_linked_list.traverse()
+print(new_linked_list.search(30))
