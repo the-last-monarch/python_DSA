@@ -165,13 +165,28 @@ class LinkedList:
         return popped_node.value
 # # Time Complixity in "remove" will be O(n), Space Complixity = O(1)
 
-# Delete All Nodes of Singly Linked List
     def delete_all(self):
-        self.head = None
+        self.head = None   # --------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
         self.tail = None
-        self.length = 0
+        self.length = 0   # ---------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+# # Time Complixity in "delete_all" will be O(n), Space Complixity = O(1)
 
 
+# # # # # # # # # # # # # # # Time and Space Complexity of Singly Linked List # # # # # # # # # # # # # # # # # 
+
+                                            # Time Complixity            # Space complixity
+# # Created                                        O(1)                           O(1)
+# # Append                                         O(1)                           O(1)
+# # Prepend                                        O(1)                           O(1)
+# # Insert                                         O(n)                           O(1)
+# # Search                                         O(n)                           O(1)
+# # Traverse                                       O(n)                           O(1)
+# # Get                                            O(n)                           O(1)
+# # Set_value                                      O(n)                           O(1)
+# # Pop_first                                      O(1)                           O(1)
+# # Pop                                            O(n)                           O(1)
+# # Remove                                         O(n)                           O(1)
+# # Delete_all                                     O(1)                           O(1)
 
 
 new_linked_list = LinkedList()
