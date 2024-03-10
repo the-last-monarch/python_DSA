@@ -50,6 +50,7 @@ class LinkedList:
             self.tail.next = new_node   # ------------->  Time Complixity = O(1), Space Complixity = O(1)
             self.tail = new_node   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
         self.length += 1
+# # Time Complixity in "append" will be O(n), Space Complixity = O(1)
         
     def prepend(self, value) :
         new_node = Node(value)   # ------------------------->  Time Complixity = O(1), Space Complixity = O(1)
@@ -60,6 +61,7 @@ class LinkedList:
             new_node.next = self.head   # ------------------>  Time Complixity = O(1), Space Complixity = O(1)
             self.head = new_node   # ----------------------->  Time Complixity = O(1), Space Complixity = O(1)
         self.length += 1
+# # Time Complixity in "prepend" will be O(n), Space Complixity = O(1)
     
     def insert(self, index, value):
         new_node = Node(value)   # --------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
@@ -79,14 +81,14 @@ class LinkedList:
             temp_node.next = new_node   # -------------------------->  Time Complixity = O(1), Space Complixity = O(1)
         self.length += 1
         return True
-# # Time Complixity in insert will be O(n), Space Complixity = O(1)
+# # Time Complixity in "insert" will be O(n), Space Complixity = O(1)
 
     def traverse(self):
         current = self.head
         while current is not None:   # --------------------------->  Time Complixity = O(n), Space Complixity = O(1)
             print(current.value)
             current = current.next
-# # Time Complixity in traverse will be O(n), Space Complixity = O(1)
+# # Time Complixity in "traverse" will be O(n), Space Complixity = O(1)
 
     def search(self, target):
         current = self.head   # --------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
@@ -97,7 +99,7 @@ class LinkedList:
             current = current.next   # -------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
             index += 1
         return -1
-# # Time Complixity in traverse will be O(n), Space Complixity = O(1)
+# # Time Complixity in "search" will be O(n), Space Complixity = O(1)
 
     def get(self, index):
         if index == -1:   # --------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
@@ -108,8 +110,16 @@ class LinkedList:
         for _ in range(index):   # -------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
             current = current.next
         return current   # ---------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
-# # Time Complixity in get will be O(n), Space Complixity = O(1)
-#  
+# # Time Complixity in "get" will be O(n), Space Complixity = O(1)
+
+    def set_value(self, index , value):
+        temp = self.get(index)   # ---------------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+        if temp:
+            temp.value = value   # ---------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            return True
+        return False   # -------------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+# # Time Complixity in "set" will be O(n), Space Complixity = O(1)
+
 
 new_linked_list = LinkedList()
 new_linked_list.insert(1,50)
@@ -119,7 +129,9 @@ new_linked_list.append(30)
 # print(new_linked_list)
 # # print(new_linked_list.length)
 new_linked_list.prepend(40)
-print(new_linked_list)
 new_linked_list.traverse()
 print(new_linked_list.search(30))
 print(new_linked_list.get(-1))
+print(new_linked_list)
+print(new_linked_list.set_value(3, 70))
+print(new_linked_list)
