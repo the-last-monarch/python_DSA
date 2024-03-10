@@ -89,30 +89,27 @@ class LinkedList:
 # # Time Complixity in traverse will be O(n), Space Complixity = O(1)
 
     def search(self, target):
-        current = self.head   # --------------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+        current = self.head   # --------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
         index = 0
         while current:   # -------------------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
-            if current.value == target:   # --------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+            if current.value == target:   # --------------------------->  Time Complixity = O(1), Space Complixity = O(1)
                 return index
-            current = current.next   # -------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+            current = current.next   # -------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
             index += 1
         return -1
 # # Time Complixity in traverse will be O(n), Space Complixity = O(1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def get(self, index):
+        if index == -1:   # --------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            return self.tail
+        if index < -1 or index >= self.length:   # ---------------->  Time Complixity = O(1), Space Complixity = O(1)
+            return None
+        current = self.head
+        for _ in range(index):   # -------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+            current = current.next
+        return current   # ---------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+# # Time Complixity in get will be O(n), Space Complixity = O(1)
+#  
 
 new_linked_list = LinkedList()
 new_linked_list.insert(1,50)
@@ -125,3 +122,4 @@ new_linked_list.prepend(40)
 print(new_linked_list)
 new_linked_list.traverse()
 print(new_linked_list.search(30))
+print(new_linked_list.get(-1))
