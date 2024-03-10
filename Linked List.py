@@ -120,18 +120,36 @@ class LinkedList:
         return False   # -------------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
 # # Time Complixity in "set" will be O(n), Space Complixity = O(1)
 
+    def pop_first(self):
+        if self.length == 0:   # ------------------------------------------>  Time Complixity = O(1), Space Complixity = O(1)
+            return None
+        popped_node = self.head   # --------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        if self.length == 1:   # ------------------------------------------>  Time Complixity = O(1), Space Complixity = O(1)
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next   # -------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+            popped_node.next = None
+        self.length -= 1   # ---------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        return popped_node
+# # Time Complixity in "pop_first" will be O(n), Space Complixity = O(1)
+
+
+
 
 new_linked_list = LinkedList()
-new_linked_list.insert(1,50)
-new_linked_list.append(10)
-new_linked_list.append(20)
-new_linked_list.append(30)
-# print(new_linked_list)
-# # print(new_linked_list.length)
+# new_linked_list.insert(1,50)
+# new_linked_list.append(10)
+# new_linked_list.append(20)
+# new_linked_list.append(30)
+print(new_linked_list)
+# print(new_linked_list.length)
 new_linked_list.prepend(40)
 new_linked_list.traverse()
 print(new_linked_list.search(30))
 print(new_linked_list.get(-1))
-print(new_linked_list)
 print(new_linked_list.set_value(3, 70))
+print(new_linked_list)
+print(new_linked_list.pop_first())
+print(new_linked_list.pop_first())
 print(new_linked_list)
