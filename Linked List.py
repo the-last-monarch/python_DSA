@@ -132,7 +132,7 @@ class LinkedList:
             popped_node.next = None
         self.length -= 1   # ---------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
         return popped_node
-# # Time Complixity in "pop_first" will be O(n), Space Complixity = O(1)
+# # Time Complixity in "pop_first" will be O(1), Space Complixity = O(1)
 
     def pop(self):
         if self.length == 0:   # ---------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
@@ -150,20 +150,42 @@ class LinkedList:
         return popped_node   # ----------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
 # # Time Complixity in "pop" will be O(n), Space Complixity = O(1)
 
+    def remove(self, index):
+        if index >= self.length or index < -1:   # ------------------------------>  Time Complixity = O(1), Space Complixity = O(1)
+            return None
+        if index == 0:
+            return self.pop_first()   # ----------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        if index == self.length - 1 or index == -1:
+            return self.pop()   # ----------------------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+        prev_node = self.get(index - 1)   # ------------------------------------->  Time Complixity = O(n), Space Complixity = O(1)
+        popped_node = prev_node.next
+        prev_node.next = popped_node.next
+        popped_node.next = None   # --------------------------------------------->  Time Complixity = O(1), Space Complixity = O(1)
+        self.length -= 1
+        return popped_node.value
+# # Time Complixity in "remove" will be O(n), Space Complixity = O(1)
+
+
+
+
+
+
 new_linked_list = LinkedList()
-# new_linked_list.insert(1,50)
-# new_linked_list.append(10)
-# new_linked_list.append(20)
-# new_linked_list.append(30)
+
+new_linked_list.insert(1,50)
+new_linked_list.append(10)
+new_linked_list.append(20)
+new_linked_list.append(30)
 print(new_linked_list)
 # print(new_linked_list.length)
-# new_linked_list.prepend(40)
+new_linked_list.prepend(40)
 new_linked_list.traverse()
 print(new_linked_list.search(30))
 print(new_linked_list.get(-1))
 print(new_linked_list.set_value(3, 70))
 # print(new_linked_list.pop_first())
 # print(new_linked_list.pop_first())
+# print(new_linked_list.pop())
 print(new_linked_list)
-print(new_linked_list.pop())
+print(new_linked_list.remove(4))
 print(new_linked_list)
