@@ -209,3 +209,8 @@ print(new_linked_list.remove(4))
 print(new_linked_list)
 print(new_linked_list.delete_all())
 print(new_linked_list)
+
+
+
+
+
