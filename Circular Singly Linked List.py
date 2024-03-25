@@ -109,6 +109,13 @@ class CSLinkedList:
         for _ in range(index): #---------------------------- Time Complixity = O(n) because of "for loop" Space Complixity = O(1)
             current = current.next
         return current #------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+    
+    def set(self, index, value):
+        temp = self.get(index) #---------------------------- Time Complixity = O(n) becasue "we are using get method" Space Complixity = O(1)
+        if temp: #------------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            temp.value = value
+            return True
+        return False #-------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
@@ -123,3 +130,5 @@ print(cslinkedlist.get(-1))
 # print(cslinkedlist.tail.value)
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
+print(cslinkedlist.set(2, 100))
+print(cslinkedlist)
