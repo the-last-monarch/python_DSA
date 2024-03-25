@@ -146,14 +146,29 @@ class CSLinkedList:
             popped_node.next = None #----------------------- Time Complixity = O(1) Space Complixity = O(1)
         self.length -= 1
         return popped_node #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def remove(self, index):
+        if index < 0 or index >= self.length: #------------- Time Complixity = O(1) Space Complixity = O(1)
+            return None
+        elif index == 0: #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            return self.popped_first()
+        elif index == self.length - 1:
+            return self.pop() #----------------------------- Time Complixity = O(n) because we are using "pop method" here Space Complixity = O(1)
+        else: #--------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            prev_node = self.get(index-1) #----------------- Time Complixity = O(n) because we are using "get method" here Space Complixity = O(1)
+            popped_node = prev_node.next
+            prev_node.next = popped_node.next #------------- Time Complixity = O(1) Space Complixity = O(1)
+            popped_node.next = None
+        self.length -= 1
+        return popped_node #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
 cslinkedlist.append(10)
-# cslinkedlist.append(20)
-# cslinkedlist.append(30)
-# cslinkedlist.append(40)
-# cslinkedlist.insert(0, 50)
+cslinkedlist.append(20)
+cslinkedlist.append(30)
+cslinkedlist.append(40)
+cslinkedlist.insert(0, 50)
 # print(cslinkedlist)
 # print(cslinkedlist.get(-1))
 # cslinkedlist.traverse()
@@ -161,5 +176,6 @@ cslinkedlist.append(10)
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
 print(cslinkedlist)
-print(cslinkedlist.pop())
+print(cslinkedlist.remove(4))
 print(cslinkedlist)
+print(cslinkedlist.tail.value)
