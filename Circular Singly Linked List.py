@@ -2,6 +2,9 @@ class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
+    
+    def __str__(self):
+        return str(self.value)
 
 class CSLinkedList:
     # 1 element Circular Singly Linked List
@@ -90,12 +93,22 @@ class CSLinkedList:
     def search(self,target):
         current = self.head
         while current is not None: #------------------------ Time Complixity = O(n) because of "while loop" Space Complixity = O(1)
-            if current.value == target: #------------------- Time Complixity = O(n) because of Space Complixity = O(1)
-                return True #------------------------------- Time Complixity = O(n) because of Space Complixity = O(1)
+            if current.value == target: #------------------- Time Complixity = O(1) Space Complixity = O(1)
+                return True #------------------------------- Time Complixity = O(1) Space Complixity = O(1)
             current = current.next
-            if current == self.head: #---------------------- Time Complixity = O(n) because of Space Complixity = O(1)
-                break #------------------------------------- Time Complixity = O(n) because of Space Complixity = O(1)
-        return False #-------------------------------------- Time Complixity = O(n) because of Space Complixity = O(1)
+            if current == self.head: #---------------------- Time Complixity = O(1) Space Complixity = O(1)
+                break #------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        return False #-------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def get(self, index):
+        current = self.head #------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        if index == -1: #----------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            return self.tail
+        if index < -1 or index >= self.length: #------------ Time Complixity = O(1) Space Complixity = O(1)
+            return None
+        for _ in range(index): #---------------------------- Time Complixity = O(n) because of "for loop" Space Complixity = O(1)
+            current = current.next
+        return current #------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
@@ -105,9 +118,8 @@ cslinkedlist.append(30)
 cslinkedlist.append(40)
 cslinkedlist.insert(0, 50)
 print(cslinkedlist)
-cslinkedlist.traverse()
-print(cslinkedlist.search(30))
-print(cslinkedlist.search(90))
+print(cslinkedlist.get(-1))
+# cslinkedlist.traverse()
 # print(cslinkedlist.tail.value)
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
