@@ -110,7 +110,7 @@ class CSLinkedList:
             current = current.next
         return current #------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
     
-    def set(self, index, value):
+    def set_value(self, index, value):
         temp = self.get(index) #---------------------------- Time Complixity = O(n) becasue "we are using get method" Space Complixity = O(1)
         if temp: #------------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
             temp.value = value
@@ -169,6 +169,20 @@ class CSLinkedList:
         self.head = None
         self.tail = None #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         self.length = 0
+ 
+                                            # Time Complixity            # Space complixity
+# # Created                                        O(1)                           O(1)
+# # Append                                         O(1)                           O(1)
+# # Prepend                                        O(1)                           O(1)
+# # Insert                                         O(n)                           O(1)
+# # Search                                         O(n)                           O(1)
+# # Traverse                                       O(n)                           O(1)
+# # Get                                            O(n)                           O(1)
+# # Set_value                                      O(n)                           O(1)
+# # Pop_first                                      O(1)                           O(1)
+# # Pop                                            O(n)                           O(1)
+# # Remove                                         O(n)                           O(1)
+# # Delete_all                                     O(1)                           O(1)
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
