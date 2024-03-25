@@ -86,6 +86,16 @@ class CSLinkedList:
             current = current.next
             if current == self.head: #---------------------- Time Complixity = O(1) Space Complixity = O(1)
                 break
+    
+    def search(self,target):
+        current = self.head
+        while current is not None: #------------------------ Time Complixity = O(n) because of "while loop" Space Complixity = O(1)
+            if current.value == target: #------------------- Time Complixity = O(n) because of Space Complixity = O(1)
+                return True #------------------------------- Time Complixity = O(n) because of Space Complixity = O(1)
+            current = current.next
+            if current == self.head: #---------------------- Time Complixity = O(n) because of Space Complixity = O(1)
+                break #------------------------------------- Time Complixity = O(n) because of Space Complixity = O(1)
+        return False #-------------------------------------- Time Complixity = O(n) because of Space Complixity = O(1)
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
@@ -95,9 +105,9 @@ cslinkedlist.append(30)
 cslinkedlist.append(40)
 cslinkedlist.insert(0, 50)
 print(cslinkedlist)
-cslinkedlist.insert(5, 60)
-print(cslinkedlist)
 cslinkedlist.traverse()
+print(cslinkedlist.search(30))
+print(cslinkedlist.search(90))
 # print(cslinkedlist.tail.value)
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
