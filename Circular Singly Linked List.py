@@ -33,38 +33,64 @@ class CSLinkedList:
     
     
     def append(self, value):
-        new_node = Node(value) #----------------------- Time Complixity = O(1) Space Complixity = O(1) because we are adding only 1 element in the end 
-        if self.length == 0: #------------------------- Time Complixity = O(1) Space Complixity = O(1)
-            self.head = new_node #--------------------- Time Complixity = O(1) Space Complixity = O(1)
+        new_node = Node(value) #---------------------------- Time Complixity = O(1) Space Complixity = O(1) because we are adding only 1 element in the end 
+        if self.length == 0: #------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            self.head = new_node #-------------------------- Time Complixity = O(1) Space Complixity = O(1)
             self.tail = new_node
-            new_node.next = new_node #----------------- Time Complixity = O(1) Space Complixity = O(1)
+            new_node.next = new_node #---------------------- Time Complixity = O(1) Space Complixity = O(1)
         else:
-            self.tail.next = new_node #---------------- Time Complixity = O(1) Space Complixity = O(1)
+            self.tail.next = new_node #--------------------- Time Complixity = O(1) Space Complixity = O(1)
             new_node.next = self.head
             self.tail = new_node
-        self.length += 1 #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        self.length += 1 #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
     
     def prepend(self,value):
-        new_node = Node(value) #----------------------- Time Complixity = O(1) Space Complixity = O(1)
-        if self.head is None: #------------------------ Time Complixity = O(1) Space Complixity = O(1)
+        new_node = Node(value) #---------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        if self.head is None: #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
             self.head = new_node
-            self.tail = new_node #--------------------- Time Complixity = O(1) Space Complixity = O(1)
+            self.tail = new_node #-------------------------- Time Complixity = O(1) Space Complixity = O(1)
             new_node.next = new_node
         else:
             new_node.next = self.head
-            self.head = new_node #--------------------- Time Complixity = O(1) Space Complixity = O(1)
+            self.head = new_node #-------------------------- Time Complixity = O(1) Space Complixity = O(1)
             self.tail.next = new_node
-        self.length += 1 #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        self.length += 1 #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def insert(self, index, value):
+        new_node = Node(value)
+        if index > self.length or index < 0: #-------------- Time Complixity = O(1) Space Complixity = O(1)
+            raise Exception("Index is out of range")
+        if index == 0: #------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            if self.length == 0: #-------------------------- Time Complixity = O(1) Space Complixity = O(1)
+                self.head = new_node
+                self.tail = new_node
+                new_node.next = new_node #------------------ Time Complixity = O(1) Space Complixity = O(1)
+            else: #----------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+                new_node.next = self.head
+                self.head = new_node
+                self.tail.next = new_node
+        elif index == self.length: #------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            self.tail.next = new_node
+            new_node.next = self.head
+            self.tail = new_node
+        else:  #-------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            temp_node = self.head
+            for _ in range(index - 1): #-------------------- Time Complixity = O(n) because of "for loop" Space Complixity = O(1)
+                temp_node = temp_node.next
+            new_node.next = temp_node.next
+            temp_node.next = new_node #--------------------- Time Complixity = O(1) Space Complixity = O(1)
+        self.length += 1 #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
 cslinkedlist.append(10)
 cslinkedlist.append(20)
+cslinkedlist.append(30)
+cslinkedlist.append(40)
+cslinkedlist.insert(0, 50)
 print(cslinkedlist)
-cslinkedlist.prepend(30)
+cslinkedlist.insert(5, 60)
 print(cslinkedlist)
-cslinkedlist.prepend(40)
-print(cslinkedlist)
+print(cslinkedlist.tail.value)
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
-print(cslinkedlist)
