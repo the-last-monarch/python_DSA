@@ -29,8 +29,6 @@ class CSLinkedList:
                     break
                 result += '->'
             return result
-                
-    
     
     def append(self, value):
         new_node = Node(value) #---------------------------- Time Complixity = O(1) Space Complixity = O(1) because we are adding only 1 element in the end 
@@ -80,6 +78,14 @@ class CSLinkedList:
             new_node.next = temp_node.next
             temp_node.next = new_node #--------------------- Time Complixity = O(1) Space Complixity = O(1)
         self.length += 1 #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def traverse(self):
+        current = self.head #------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        while current is not None: #------------------------ Time Complixity = O(n) because of "while loop" Space Complixity = O(1)
+            print(current.value)
+            current = current.next
+            if current == self.head: #---------------------- Time Complixity = O(1) Space Complixity = O(1)
+                break
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
@@ -91,6 +97,7 @@ cslinkedlist.insert(0, 50)
 print(cslinkedlist)
 cslinkedlist.insert(5, 60)
 print(cslinkedlist)
-print(cslinkedlist.tail.value)
+cslinkedlist.traverse()
+# print(cslinkedlist.tail.value)
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
