@@ -116,19 +116,34 @@ class CSLinkedList:
             temp.value = value
             return True
         return False #-------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def popped_first(self):
+        popped_node = self.head #--------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        if self.length == 0: #------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            return None
+        if self.length == 1: #------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            self.head = None
+            self.tail = None
+        else: #--------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            self.head = self.head.next
+            self.tail.next = self.head
+            popped_node.next = None
+        self.length -= 1
+        return popped_node #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
-cslinkedlist.append(10)
-cslinkedlist.append(20)
-cslinkedlist.append(30)
-cslinkedlist.append(40)
-cslinkedlist.insert(0, 50)
-print(cslinkedlist)
-print(cslinkedlist.get(-1))
+# cslinkedlist.append(10)
+# cslinkedlist.append(20)
+# cslinkedlist.append(30)
+# cslinkedlist.append(40)
+# cslinkedlist.insert(0, 50)
+# print(cslinkedlist)
+# print(cslinkedlist.get(-1))
 # cslinkedlist.traverse()
 # print(cslinkedlist.tail.value)
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
-print(cslinkedlist.set(2, 100))
+print(cslinkedlist)
+print(cslinkedlist.popped_first())
 print(cslinkedlist)
