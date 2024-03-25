@@ -161,6 +161,14 @@ class CSLinkedList:
             popped_node.next = None
         self.length -= 1
         return popped_node #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def delete_all(self):
+        if self.length == 0: #------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            return
+        self.tail.next = None #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        self.head = None
+        self.tail = None #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        self.length = 0
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
@@ -176,6 +184,6 @@ cslinkedlist.insert(0, 50)
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
 print(cslinkedlist)
-print(cslinkedlist.remove(4))
+print(cslinkedlist.delete_all())
 print(cslinkedlist)
-print(cslinkedlist.tail.value)
+# print(cslinkedlist.tail.value)
