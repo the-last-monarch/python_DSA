@@ -130,10 +130,26 @@ class CSLinkedList:
             popped_node.next = None
         self.length -= 1
         return popped_node #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def pop(self):
+        if self.length == 0: #------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            return None
+        popped_node = self.tail #--------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        if self.length == 1: #------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            self.head = self.tail = None
+        else: #--------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            temp = self.head
+            while temp.next is not self.tail: #------------- Time Complixity = O(n) because of "while loop " Space Complixity = O(1)
+                temp = temp.next
+            temp.next = self.head #------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            self.tail = temp
+            popped_node.next = None #----------------------- Time Complixity = O(1) Space Complixity = O(1)
+        self.length -= 1
+        return popped_node #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         
 cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head)
-# cslinkedlist.append(10)
+cslinkedlist.append(10)
 # cslinkedlist.append(20)
 # cslinkedlist.append(30)
 # cslinkedlist.append(40)
@@ -145,5 +161,5 @@ cslinkedlist = CSLinkedList()
 # print(cslinkedlist.head.value)
 # print(cslinkedlist.head.next.value)
 print(cslinkedlist)
-print(cslinkedlist.popped_first())
+print(cslinkedlist.pop())
 print(cslinkedlist)
