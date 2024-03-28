@@ -53,9 +53,19 @@ class DoublyLinkedList:
     
     def ReverseTraverse(self):
         current_node = self.tail
-        while current_node:
+        while current_node: #----------------------------------- Time Complixity = O(n) because of the "while loop" Space Complixity = O(1)
             print(current_node.value)
-            current_node = current_node.prev
+            current_node = current_node.prev #------------------ Time Complixity = O(1) Space Complixity = O(1)
+    
+    def search(self, target):
+        current_node = self.head #------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+        index = 0
+        while current_node: #----------------------------------- Time Complixity = O(n) because of the "while loop" Space Complixity = O(1)
+            if current_node.value == target: #------------------ Time Complixity = O(1) Space Complixity = O(1)
+                return index
+            current_node = current_node.next #------------------ Time Complixity = O(1) Space Complixity = O(1)
+            index += 1
+        return False #------------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
 
 # new_node = Node(10)
 # print(new_node)
@@ -68,4 +78,5 @@ print(newDDL)
 newDDL.prepend(40)
 print(newDDL)
 # newDDL.traverse()
-newDDL.ReverseTraverse()
+# newDDL.ReverseTraverse()
+print(newDDL.search(10))
