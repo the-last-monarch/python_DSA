@@ -67,6 +67,20 @@ class DoublyLinkedList:
             index += 1
         return False #------------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
 
+    def get(self, index):
+        if index < 0 or index >= self.length: #----------------- Time Complixity = O(1) Space Complixity = O(1)
+            return None
+        if index < self.length // 2: #-------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            current_node = self.head
+            for _ in range(index): #---------------------------- Time Complixity = O(n/2) because we are traversing through only half list Space Complixity = O(1)
+                current_node = current_node.next
+        else: #------------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            current_node = self.tail
+            for _ in range(self.length - 1, index, -1): #------- Time Complixity = O(n/2) because we are traversing through only half list Space Complixity = O(1)
+                current_node = current_node.prev
+        return current_node.value #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    # # The overall Time Complixity will be O(n) because we can eliminate constant 
+
 # new_node = Node(10)
 # print(new_node)
 
@@ -75,8 +89,10 @@ newDDL.append(10)
 newDDL.append(20)
 newDDL.append(30)
 print(newDDL)
-newDDL.prepend(40)
+newDDL.prepend(50)
+newDDL.prepend(60)
 print(newDDL)
 # newDDL.traverse()
 # newDDL.ReverseTraverse()
-print(newDDL.search(10))
+# print(newDDL.search(10))
+print(newDDL.get(-1))
