@@ -12,6 +12,16 @@ class DoublyLinkedList:
         self.head = None
         self.tail = None
         self.length = 0
+    
+    def __str__(self) -> str:
+        temp_node = self.head
+        result = ""
+        while temp_node is not None:
+            result += str(temp_node.value)
+            if temp_node.next is not None:
+                result += "<->"
+            temp_node = temp_node.next
+        return result
 
     def append(self, value):
         new_node = Node(value) #-------------------------------- Time Complixity = O(n) Space Complixity = O(1)
@@ -30,4 +40,5 @@ class DoublyLinkedList:
 newDDL = DoublyLinkedList()
 newDDL.append(10)
 newDDL.append(20)
-print(newDDL.tail.prev)
+newDDL.append(30)
+print(newDDL)
