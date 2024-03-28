@@ -44,6 +44,12 @@ class DoublyLinkedList:
             new_node.prev = self.tail
             self.tail = new_node
         self.length += 1 #-------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def traverse(self):
+        current_node = self.head
+        while current_node: #----------------------------------- Time Complixity = O(n) because of the "while loop" Space Complixity = O(1)
+            print(current_node.value)
+            current_node = current_node.next #------------------ Time Complixity = O(1) Space Complixity = O(1)
 
 # new_node = Node(10)
 # print(new_node)
@@ -55,3 +61,4 @@ newDDL.append(30)
 print(newDDL)
 newDDL.prepend(40)
 print(newDDL)
+newDDL.traverse()
