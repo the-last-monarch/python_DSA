@@ -107,17 +107,31 @@ class DoublyLinkedList:
             self.length += 1
             
     def Popped_first(self):
-        if not self.head:
+        if not self.head: #------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
             return None
-        popped_node = self.head
-        if self.length == 1:
+        popped_node = self.head #------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        if self.length == 1: #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
             self.head = None
             self.tail = None
-        else:
+        else: #------------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
             self.head = self.head.next
-            self.head.prev = None
+            self.head.prev = None #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
             popped_node.next = None
-        self.length -= 1
+        self.length -= 1 #-------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        return popped_node
+    
+    def pop(self):
+        if self.length == 0: #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            return None
+        popped_node = self.tail
+        if self.length == 1: #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            self.head = None
+            self.tail = None #---------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        else:
+            self.tail = self.tail.prev #------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            self.tail.next = None
+            popped_node.prev = None
+        self.length -= 1 #-------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         return popped_node
         
 
@@ -139,5 +153,6 @@ print(newDDL)
 # print(newDDL.get(4))
 # newDDL.set_value(1,100)
 # newDDL.insert(7,100)
-newDDL.Popped_first()
+# newDDL.Popped_first()
+newDDL.pop()
 print(newDDL)
