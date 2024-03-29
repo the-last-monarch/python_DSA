@@ -133,6 +133,21 @@ class DoublyLinkedList:
             popped_node.prev = None
         self.length -= 1 #-------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         return popped_node
+    
+    def remove(self, index):
+        if index > self.length or index < 0: #------------------ Time Complixity = O(1) Space Complixity = O(1)
+            return None 
+        if index == 0: #---------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            return self.Popped_first()
+        if index == self.length - 1: #-------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            return self.pop()
+        popped_node = self.get(index) #------------------------- Time Complixity = O(n) because we are using "get method" here. Space Complixity = O(1)
+        popped_node.prev.next = popped_node.next
+        popped_node.next.prev = popped_node.prev
+        popped_node.next = None #------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        popped_node.prev = None
+        self.length -= 1
+        return popped_node #------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
         
 
 # new_node = Node(10)
@@ -154,5 +169,6 @@ print(newDDL)
 # newDDL.set_value(1,100)
 # newDDL.insert(7,100)
 # newDDL.Popped_first()
-newDDL.pop()
+# newDDL.pop()
+newDDL.remove(9)
 print(newDDL)
