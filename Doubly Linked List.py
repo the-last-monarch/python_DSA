@@ -105,12 +105,27 @@ class DoublyLinkedList:
             temp_node.next.prev = new_node #-------------------- Time Complixity = O(1) Space Complixity = O(1)
             temp_node.next = new_node
             self.length += 1
+            
+    def Popped_first(self):
+        if not self.head:
+            return None
+        popped_node = self.head
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
+            self.head.prev = None
+            popped_node.next = None
+        self.length -= 1
+        return popped_node
         
 
 # new_node = Node(10)
 # print(new_node)
 
 newDDL = DoublyLinkedList()
+newDDL.Popped_first()
 newDDL.append(10)
 newDDL.append(20)
 newDDL.append(30)
@@ -123,5 +138,6 @@ print(newDDL)
 # print(newDDL.search(10))
 # print(newDDL.get(4))
 # newDDL.set_value(1,100)
-newDDL.insert(7,100)
+# newDDL.insert(7,100)
+newDDL.Popped_first()
 print(newDDL)
