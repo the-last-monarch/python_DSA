@@ -148,6 +148,25 @@ class DoublyLinkedList:
         popped_node.prev = None
         self.length -= 1
         return popped_node #------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+    
+    
+# # # # # # # # # # # # # # # Time and Space Complexity of Double Linked List # # # # # # # # # # # # # # # # # 
+
+                                            # Time Complixity            # Space complixity
+# # Created                                        O(1)                           O(1)
+# # Append                                         O(1)                           O(1)
+# # Prepend                                        O(1)                           O(1)
+# # Insert                                         O(n)                           O(1)
+# # Search                                         O(n)                           O(1)
+# # Traverse                                       O(n)                           O(1)
+# # Reverse Traverse                               O(n)                           O(1)
+# # Get                                            O(n)                           O(1)
+# # Set_value                                      O(n)                           O(1)
+# # Pop_first                                      O(1)                           O(1)
+# # Pop                                            O(1)                           O(1)
+# # Remove                                         O(n)                           O(1)
+# # Delete_all                                     O(1)                           O(1)
+
         
 
 # new_node = Node(10)
