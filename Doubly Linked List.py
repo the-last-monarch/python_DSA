@@ -87,6 +87,25 @@ class DoublyLinkedList:
             node.value = value
             return True #--------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         return False
+    
+    def insert(self, index, value):
+        if index > self.length or index < 0: #------------------ Time Complixity = O(1) Space Complixity = O(1)
+            return False
+        new_node = Node(value) #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        if index == 0:
+            self.prepend(value) #------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            return
+        elif index == self.length:
+            self.append(value) #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            return
+        else:
+            temp_node = self.get(index-1) #--------------------- Time Complixity = O(n) because we are using "get method" here. Space Complixity = O(1)
+            new_node.next = temp_node.next
+            new_node.prev = temp_node
+            temp_node.next.prev = new_node #-------------------- Time Complixity = O(1) Space Complixity = O(1)
+            temp_node.next = new_node
+            self.length += 1
+        
 
 # new_node = Node(10)
 # print(new_node)
@@ -103,5 +122,6 @@ print(newDDL)
 # newDDL.ReverseTraverse()
 # print(newDDL.search(10))
 # print(newDDL.get(4))
-newDDL.set_value(1,100)
+# newDDL.set_value(1,100)
+newDDL.insert(7,100)
 print(newDDL)
