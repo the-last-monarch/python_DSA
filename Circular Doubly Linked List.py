@@ -100,6 +100,14 @@ class CircularDoublyLinkedList():
             for i in range(self.length - 1, index, -1): #------------------ Time Complixity = O(n/2) because we are traversing through only half list Space Complixity = O(1)
                 current_node = current_node.prev
         return current_node
+    # # The overall Time Complixity will be O(n) because we can eliminate constant 
+    
+    def set_value(self, index, value):
+        temp_node = self.get(index) #-------------------------------------- Time Complixity = O(n) because we are using "get method" here Space Complixity = O(1)
+        if temp_node: #---------------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            temp_node.value = value
+            return True
+        return False
             
         
 new_cdll = CircularDoublyLinkedList()
@@ -113,4 +121,6 @@ print(new_cdll)
 # new_cdll.traverse()
 # new_cdll.reverse_traverse()
 # print(new_cdll.search(80))
-print(new_cdll.get(-1))
+# print(new_cdll.get(-1))
+print(new_cdll.set_value(1, 100))
+print(new_cdll)
