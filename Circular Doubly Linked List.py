@@ -108,6 +108,23 @@ class CircularDoublyLinkedList():
             temp_node.value = value
             return True
         return False
+    
+    def insert(self, index, value):
+        if index < 0 or index > self.length: #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            raise Exception("Index is out of range")
+        if index == 0:
+            self.prepend(value) #------------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            return
+        if index == self.length:
+            self.append(value) #------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            return
+        new_node = Node(value)
+        temp_node = self.get(index-1) #------------------------------------ Time Complixity = O(n) because we are using "get method" here Space Complixity = O(1)
+        new_node.next = temp_node.next
+        new_node.prev = temp_node
+        temp_node.next.prev = new_node
+        temp_node.next = new_node
+        self.length += 1
             
         
 new_cdll = CircularDoublyLinkedList()
@@ -122,5 +139,6 @@ print(new_cdll)
 # new_cdll.reverse_traverse()
 # print(new_cdll.search(80))
 # print(new_cdll.get(-1))
-print(new_cdll.set_value(1, 100))
+# print(new_cdll.set_value(1, 100))
+new_cdll.insert(2, 50)
 print(new_cdll)
