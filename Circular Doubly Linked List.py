@@ -178,6 +178,25 @@ class CircularDoublyLinkedList():
         self.head = None
         self.tail = None
         self.length = 0
+        
+ # # # # # # # # # # # # # # Time and Space Complexity of Circular Double Linked List # # # # # # # # # # # # # # # # # 
+
+                                            # Time Complixity            # Space complixity
+# # Created                                        O(1)                           O(1)
+# # Append                                         O(1)                           O(1)
+# # Prepend                                        O(1)                           O(1)
+# # Insert                                         O(n)                           O(1)
+# # Search                                         O(n)                           O(1)
+# # Traverse                                       O(n)                           O(1)
+# # Reverse Traverse                               O(n)                           O(1)
+# # Get                                            O(n)                           O(1)
+# # Set_value                                      O(n)                           O(1)
+# # Pop_first                                      O(1)                           O(1)
+# # Pop                                            O(1)                           O(1)
+# # Remove                                         O(n)                           O(1)
+# # Delete_all                                     O(1)                           O(1)
+
+
             
         
 new_cdll = CircularDoublyLinkedList()
