@@ -173,6 +173,11 @@ class CircularDoublyLinkedList():
             popped_node.prev = None
         self.length -= 1 #-------------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         return popped_node
+    
+    def delete_all(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
             
         
 new_cdll = CircularDoublyLinkedList()
@@ -191,5 +196,6 @@ print(new_cdll)
 # new_cdll.insert(2, 50)
 # new_cdll.pop_first()
 # new_cdll.pop()
-new_cdll.remove(-1)
+# new_cdll.remove(-1)
+new_cdll.delete_all()
 print(new_cdll)
