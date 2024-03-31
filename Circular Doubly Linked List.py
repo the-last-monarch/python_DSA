@@ -12,7 +12,17 @@ class CircularDoublyLinkedList():
         self.head = None
         self.tail = None
         self.length = 0
-
+    
+    def __str__(self) -> str:
+        current_node = self.head
+        result = ''
+        while current_node:
+            result += str(current_node.value)
+            current_node = current_node.next
+            if current_node == self.head: break
+            result += ' <-> '
+        return result
+        
     # def __init__(self, value):
     #     new_node = Node(value)
     #     new_node.next = new_node
@@ -35,9 +45,27 @@ class CircularDoublyLinkedList():
             new_node.next = self.head
             self.tail = new_node
         self.length += 1 #------------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def prepend(self, value):
+        new_node = Node(value) #------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        if self.length == 0: #--------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            self.head = new_node
+            self.tail = new_node #----------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+            new_node.next = new_node
+            new_node.prev = new_node
+        else: #------------------------------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            self.tail.next = new_node
+            self.head.prev = new_node #------------------------------------ Time Complixity = O(1) Space Complixity = O(1)
+            new_node.next = self.head
+            new_node.prev = self.tail
+            self.head = new_node
+        self.length += 1 #------------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
         
 new_cdll = CircularDoublyLinkedList()
 
 new_cdll.append(10)
 new_cdll.append(20)
-print(new_cdll.tail)
+new_cdll.append(30)
+new_cdll.append(40)
+new_cdll.prepend(90)
+print(new_cdll)
