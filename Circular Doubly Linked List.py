@@ -140,6 +140,21 @@ class CircularDoublyLinkedList():
             self.head.prev = self.tail
             self.tail.next = self.head
         self.length -= 1 #-------------------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+    
+    def pop(self):
+        if self.length == 0:
+            return None
+        popped_node = self.tail
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.tail = self.tail.prev
+            popped_node.next = None
+            popped_node.prev = None
+            self.tail.next = self.head
+            self.head.prev = self.tail
+        self.length -= 1
             
             
         
@@ -157,5 +172,6 @@ print(new_cdll)
 # print(new_cdll.get(-1))
 # print(new_cdll.set_value(1, 100))
 # new_cdll.insert(2, 50)
-new_cdll.pop_first()
+# new_cdll.pop_first()
+new_cdll.pop()
 print(new_cdll)
