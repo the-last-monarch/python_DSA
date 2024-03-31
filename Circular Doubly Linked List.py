@@ -76,6 +76,16 @@ class CircularDoublyLinkedList():
             current_node = current_node.prev #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
             if current_node == self.tail: #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
                 break
+    
+    def search(self, target):
+        current_node = self.head #----------------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+        while current_node: #---------------------------------------------- Time Complixity = O(n) because of "while loop" Space Complixity = O(1)
+            if current_node.value == target: #----------------------------- Time Complixity = O(1) Space Complixity = O(1)
+                return True
+            current_node = current_node.next
+            if current_node == self.head: #-------------------------------- Time Complixity = O(1) Space Complixity = O(1)
+                break
+        return False
             
         
 new_cdll = CircularDoublyLinkedList()
@@ -86,5 +96,6 @@ new_cdll.append(30)
 new_cdll.append(40)
 new_cdll.prepend(90)
 print(new_cdll)
-new_cdll.traverse()
-new_cdll.reverse_traverse()
+# new_cdll.traverse()
+# new_cdll.reverse_traverse()
+print(new_cdll.search(80))
