@@ -49,29 +49,6 @@ class LinkedList:
             self.add(randint(min_value, max_value))
         return self
 
-# customLL = LinkedLists()
-# customLL.generate(10, 0, 99)
-# print(customLL)
-
-
-# # Pratice of Linked List
-from All_in_One_Linked_List import LinkedList
-
-def nthTerm(ll, n):
-    pointer1 = ll.head
-    pointer2 = ll.head
-    
-    for i in range(n):
-        if pointer2 in None:
-            return None
-        pointer2 = pointer2.next
-    
-    while pointer2:
-        pointer1 = pointer1.next
-        pointer2 = pointer2.next
-    return pointer1
-
 customLL = LinkedList()
 customLL.generate(10, 0, 99)
 print(customLL)
-print(nthTerm(customLL, 4))
