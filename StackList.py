@@ -3,4 +3,5 @@ class Stack:
         self.list = [] # -------------> Time Complixety = O(1), Space Complixety = O(1)
     
     def __str__(self) -> str:
-        pass
+        values = [str(x) for x in reversed(self.list)]
+        return '\n'.join(values)
